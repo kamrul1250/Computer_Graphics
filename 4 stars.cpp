@@ -4,38 +4,59 @@
 void display() {
     glClear(GL_COLOR_BUFFER_BIT);
 
-    glColor3f(1.0f, 0.6f, 0.0f);  // Orange color
+    glColor3f(1.0f, 1.0f, 1.0f); //red
     glLineWidth(3.0);
-    glBegin(GL_POLYGON);
+    glBegin(GL_POLYGON);  //left
+        glVertex2f( 0.2f,  -0.1f);
+        glVertex2f( 0.3f,  -0.3f);
+        glVertex2f( 0.4f,  -0.1f);
+        glVertex2f( 0.6f,  0.0f);
+        glVertex2f( 0.4f,  0.1f);
+        glVertex2f( 0.3f,  0.3f);
+        glVertex2f( 0.2f,  0.1f);
+        glVertex2f( 0.0f,  0.0f);
+        glEnd();
 
-
-
-        glVertex2f( 0.4f,  0.4f);
-
-        glVertex2f( 0.5f,  0.1f);
-        glVertex2f( 0.6f,  0.4f);
-
-        glVertex2f( 0.9f,  0.5f);
-        glVertex2f( 0.6f,  0.6f);
-
-        glVertex2f( 0.5f,  0.9f);
-        glVertex2f( 0.4f,  0.6f);
-
-        glVertex2f( 0.1f,  0.5f);
-
-
-
-
-
-
+    glColor3f(1.0f, 0.0f, 0.0f); // white
+     glBegin(GL_POLYGON);  //right
+        glVertex2f( -0.2f,  -0.1f);
+        glVertex2f( -0.3f,  -0.3f);
+        glVertex2f( -0.4f,  -0.1f);
+        glVertex2f( -0.6f,  0.0f);
+        glVertex2f( -0.4f,  0.1f);
+        glVertex2f( -0.3f,  0.3f);
+        glVertex2f( -0.2f,  0.1f);
+        glVertex2f( -0.0f,  0.0f);
     glEnd();
 
+    glColor3f(0.0f, 0.0f, 1.0f); //blue
+     glBegin(GL_POLYGON);  // bottom
+        glVertex2f( -0.1f,  -0.4f);
+        glVertex2f( -0.0f,  -0.6f);
+        glVertex2f( 0.1f,  -0.4f);
+        glVertex2f( 0.3f,  -0.3f);
+        glVertex2f( 0.1f, -0.2f);
+        glVertex2f( -0.0f,  0.0f);
+        glVertex2f( -0.1f,  -0.2f);
+        glVertex2f( -0.3f,  -0.3f);
+    glEnd();
 
+    glColor3f(0.0f, 1.0f, 0.0f); //orange
+     glBegin(GL_POLYGON);    // top
+        glVertex2f( -0.1f,  0.2f);
+        glVertex2f( 0.0f,  0.0f);
+        glVertex2f( 0.1f,  0.2f);
+        glVertex2f( 0.3f,  0.3f);
+        glVertex2f( 0.1f, 0.4f);
+        glVertex2f( 0.0f,  0.6f);
+        glVertex2f( -0.1f,  0.4f);
+        glVertex2f( -0.3f,  0.3f);
+    glEnd();
     glFlush();
 }
 
 void init() {
-    glClearColor(1.0f, 1.0f, 1.0f, 1.0f);  // White background
+    glClearColor(0.0f, 0.0f, 0.0f, 0.0f);  // black background
 }
 
 int main(int argc, char** argv) {
